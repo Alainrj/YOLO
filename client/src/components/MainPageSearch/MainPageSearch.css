@@ -1,0 +1,18 @@
+body{
+    height: 1200px;
+}
+#bannerImg {
+    width:100%;
+}
+#banner {
+    margin: 20px;
+}
+#mainPageArea {
+    border: 1px solid gray;
+    height: 700px;
+    padding: 20px;
+}
+#mainPageTitle {
+    height: 80px;
+    border: 1px solid gray;
+}
