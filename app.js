@@ -32,7 +32,7 @@ if(!isProduction) {
 }
 
 //Configuring Mongoose
-mongoose.connect('mongodb://localhost/passport-tutorial');
+mongoose.connect('mongodb://localhost/YOLO');
 mongoose.set('debug', true);
 
 // connecting Models and routes
