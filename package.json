@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "npx concurrently \"npx nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
@@ -35,6 +35,17 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.8.10"
-  }
+    "sequelize": "^5.8.10",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16",
+    "react-html5-camera-photo": "^1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alainrj/InPastTo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alainrj/InPastTo/issues"
+  },
+  "homepage": "https://github.com/Alainrj/InPastTo#readme"
 }
