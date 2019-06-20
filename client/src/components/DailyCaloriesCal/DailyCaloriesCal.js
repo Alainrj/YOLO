@@ -3,10 +3,10 @@ import "./DailyCaloriesCal.css";
 
 function DailyCaloriesCal() {
     return (
-        <div class="container">
+        <div class="container" id="dailyCalculator">
             <div class="row">
-                <div class="col-md-6">
-                    <h2>Daily Calories Calculator</h2>
+                <div class="col-md-6" id="dailyCalculatorContents">
+                    <h2 id="clientPageTitle">Daily Calories Calculator</h2>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="age">Age</span>
@@ -33,10 +33,14 @@ function DailyCaloriesCal() {
                             </div>
                             <input type="text" aria-label="Pounds" class="form-control" />
                         </div>
-                    </div>        
+                        <div class="mx-auto" id="clientBtnDiv">
+                            <button id="clientBtn" type="button" class="btn btn-info">Search</button>
+                            <button id="clientBtn" type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>       
                 </div>
-                <div class="col-md-6">
-                    <h2>Suggested Daily Calories Results</h2>
+                <div class="col-md-6" id="dailyCalculatorContents">
+                    <h2 id="clientPageTitle">Suggested Daily Calories Results</h2>
                     <table class="table">
                         <thead>
                             <tr>

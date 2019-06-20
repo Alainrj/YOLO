@@ -1,0 +1,18 @@
+#dailyCalculator {
+    margin: 20px 0;
+}
+
+#dailyCalculatorContents {
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+#clientPageTitle{
+    height: 80px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+#clientBtn {
+    margin: 20px 5px 5px 5px;
+}
