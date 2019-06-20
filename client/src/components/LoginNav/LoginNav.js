@@ -8,7 +8,7 @@ function LoginNav() {
           React Reading List
         </a>
         <a className="navbar" href="/login">
-          <img src="#"/> Log In / Register
+          <img src="#"/> Log In/ Register
         </a>
       </nav>
     );
