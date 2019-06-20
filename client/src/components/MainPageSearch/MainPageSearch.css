@@ -15,4 +15,5 @@ body{
 #mainPageTitle {
     height: 80px;
     border: 1px solid gray;
+    text-align: center;
 }

@@ -1,0 +1,21 @@
+#dailyCalender {
+    margin: 20px 0;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+#calenderContainer {
+    border: 1px solid gray;
+}
+
+#searchSection {
+    margin: 25px 0;
+}
+
+#containerBorder {
+    border: 1px solid gray;
+}
+
+#calenderContent {
+    padding: 20px;
+}
