@@ -3,45 +3,45 @@ import "./DailyCaloriesCal.css";
 
 function DailyCaloriesCal() {
     return (
-        <div class="container" id="dailyCalculator">
-            <div class="row">
-                <div class="col-md-6" id="dailyCalculatorContents">
+        <div className="container" id="dailyCalculator">
+            <div className="row">
+                <div className="col-md-6" id="dailyCalculatorContents">
                     <h2 id="clientPageTitle">Daily Calories Calculator</h2>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="age">Age</span>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="age">Age</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="ageInput" aria-describedby="ageInput" />
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="gender">Gender</label>
+                        <input type="text" className="form-control" aria-label="ageInput" aria-describedby="ageInput" />
+                        <div className="input-group-prepend">
+                            <label className="input-group-text" for="gender">Gender</label>
                         </div>
-                        <select class="custom-select" id="gender">
+                        <select className="custom-select" id="gender">
                             <option selected>Choose...</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option>
                         </select>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Height</span>
+                        <div className="input-group">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Height</span>
                             </div>
-                            <input type="text" aria-label="Feets" class="form-control"/>
-                            <input type="text" aria-label="Inches" class="form-control"/>
+                            <input type="text" aria-label="Feets" className="form-control"/>
+                            <input type="text" aria-label="Inches" className="form-control"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Weight</span>
+                        <div className="input-group">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Weight</span>
                             </div>
-                            <input type="text" aria-label="Pounds" class="form-control" />
+                            <input type="text" aria-label="Pounds" className="form-control" />
                         </div>
-                        <div class="mx-auto" id="clientBtnDiv">
-                            <button id="clientBtn" type="button" class="btn btn-info">Search</button>
-                            <button id="clientBtn" type="button" class="btn btn-primary">Save</button>
+                        <div className="mx-auto" id="clientBtnDiv">
+                            <button id="clientBtn" type="button" className="btn btn-info">Search</button>
+                            <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
                         </div>
                     </div>       
                 </div>
-                <div class="col-md-6" id="dailyCalculatorContents">
+                <div className="col-md-6" id="dailyCalculatorContents">
                     <h2 id="clientPageTitle">Suggested Daily Calories Results</h2>
-                    <table class="table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">Maintain weight</th>

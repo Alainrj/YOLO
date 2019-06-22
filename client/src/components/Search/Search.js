@@ -6,19 +6,19 @@ const Search = props => (
         <div className="row">
             <div className="col">
                 <h2> Food Calories Search </h2>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Name of Food" aria-label="Name of Food" aria-describedby="basic-addon2"></input>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">SEARCH</button>
+                <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Name of Food" aria-label="Name of Food" aria-describedby="basic-addon2"></input>
+                    <div className="input-group-append">
+                        <button className="btn btn-outline-secondary" type="button">SEARCH</button>
                     </div>
                 </div>
             </div>
-            <div className="col">
+            <div classNameName="col">
                 <h2> Restaurant Menu Calories Search </h2>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Name of the Menu" aria-label="Name of the Menu" aria-describedby="basic-addon2"></input>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">SEARCH</button>
+                <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Name of the Menu" aria-label="Name of the Menu" aria-describedby="basic-addon2"></input>
+                    <div className="input-group-append">
+                        <button className="btn btn-outline-secondary" type="button">SEARCH</button>
                     </div>
                 </div>
             </div>
