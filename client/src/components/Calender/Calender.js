@@ -3,43 +3,43 @@ import "./Calender.css";
 
 function Calender() {
     return (
-        <div class="container" id="dailyCalender">
+        <div className="container" id="dailyCalender">
             <h2 id="clientPageTitle">Daily Calories Calender</h2>
-            <div class="row" id="calenderContainer">
-                <div class="col-md-1" id="sun">Sun</div>
-                <div class="col-md-1" id="sun">Mon</div>
-                <div class="col-md-1" id="sun">Tue</div>
-                <div class="col-md-1" id="sun">Wed</div>
-                <div class="col-md-1" id="sun">Thurs</div>
-                <div class="col-md-1" id="sun">Fri</div>
-                <div class="col-md-1" id="sun">Sat</div>
+            <div className="row" id="calenderContainer">
+                <div className="col-md-1" id="sun">Sun</div>
+                <div className="col-md-1" id="sun">Mon</div>
+                <div className="col-md-1" id="sun">Tue</div>
+                <div className="col-md-1" id="sun">Wed</div>
+                <div className="col-md-1" id="sun">Thurs</div>
+                <div className="col-md-1" id="sun">Fri</div>
+                <div className="col-md-1" id="sun">Sat</div>
             </div>
-            <div class="row" id="calenderContainer">
-                <div class="col-md-5" id="containerBorder">
-                    <div class="input-group mb-3" id="searchSection">
-                        <input type="text" class="form-control" placeholder="Calories Search by Food" aria-label="Calories Search by Food" aria-describedby="button-addon2"/>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            <div className="row" id="calenderContainer">
+                <div className="col-md-5" id="containerBorder">
+                    <div className="input-group mb-3" id="searchSection">
+                        <input type="text" className="form-control" placeholder="Calories Search by Food" aria-label="Calories Search by Food" aria-describedby="button-addon2"/>
+                        <div className="input-group-append">
+                            <button className="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
                         </div>
                     </div>
-                    <div class="input-group mb-3" id="searchSection">
-                        <input type="text" class="form-control" placeholder="Calories Search by Restaurant Menu" aria-label="Calories Search by Restaurant Menu" aria-describedby="button-addon2"/>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                    <div className="input-group mb-3" id="searchSection">
+                        <input type="text" className="form-control" placeholder="Calories Search by Restaurant Menu" aria-label="Calories Search by Restaurant Menu" aria-describedby="button-addon2"/>
+                        <div className="input-group-append">
+                            <button className="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7" id="containerBorder">
+                <div className="col-md-7" id="containerBorder">
                     <div id="calenderContent">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-4">
                                     Breakfast : 
                                 </div>
-                                <div class="col-md-4">
+                                <div className="col-md-4">
                                     Lunch :
                                 </div>
-                                <div class="col-md-4">
+                                <div className="col-md-4">
                                     Dinner : 
                                 </div>
                             </div>
