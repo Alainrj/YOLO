@@ -1,6 +1,9 @@
 import React from "react";
 import "./DailyCaloriesCal.css";
 
+import axios from "axios";
+import cheerio from 'cheerio';
+
 class DailyCaloriesCal extends React.Component {
 
     state = {
@@ -23,6 +26,24 @@ class DailyCaloriesCal extends React.Component {
     handleDropDownChange = event => {
 
         this.setState({gender: event.target.value})
+    }
+
+    scrapeSearch = event => {
+        // event.preventDefault ()
+
+        const url = `https://www.calculator.net/calorie-calculator.html?ctype=standard&cage=${this.state.age}&csex=${this.state.gender}&cheightfeet=${this.state.heightFeet}&cheightinch=${this.state.heightInch}&cpound=${this.state.weight}&cactivity=1.465&cmop=0&coutunit=c&cformula=m&cfatpct=20&printit=0&x=64&y=18`
+
+        console.log("look at this", url)
+        
+        axios.get(url)
+            .then(function(response){
+                const $ = cheerio.load(response.data);
+
+              console.log('take a look',$)
+              
+            
+            })
+            
     }
 
     render() {
@@ -59,7 +80,7 @@ class DailyCaloriesCal extends React.Component {
                                 <input type="text" aria-label="Pounds" className="form-control" name="weight" value={this.state.weight} placeholder="pounds" onChange={this.handleInputChange} />
                             </div>
                             <div className="mx-auto" id="clientBtnDiv">
-                                <button id="clientBtn" type="button" className="btn btn-info">Search</button>
+                                <button id="clientBtn" type="button" className="btn btn-info" onClick={this.scrapeSearch} >Search</button>
                                 <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
                             </div>
                         </div>       
