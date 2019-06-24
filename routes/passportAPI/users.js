@@ -1,10 +1,11 @@
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const passport = require('passport');
 const express = require('express');
 
 const router = express.Router();
 const auth = require('../auth');
-const Users = mongoose.model('Users');
+//const Users = mongoose.model('Users');
+const Users = require('../../models/user');
 
 //POST new user route (optional, everyone has access)
 router.get('/test-route', function(req, res) {
