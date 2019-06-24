@@ -1,6 +1,26 @@
 import React from 'react';
 
-function LoginModal(){
+class LoginModal extends React.Component {
+    state = {
+     
+        email: "",
+        password: "",
+      
+    }
+
+    handleLoginChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        }, ()=>console.log(this.state))
+    }
+
+    loginUser = () => {
+        console.log("BUILD LOGIN API HERE")
+    }
+
+
+render(){
 
     return (
         <div className="modal fade" role="dialog" id="loginModal">
@@ -13,22 +33,23 @@ function LoginModal(){
 
                         <div className="modal-body">
                             <div className="form-group">
-                                <input type="text" name="username" className="form-control" placeholder="Username" />
+                                <input type="text" name="username" className="form-control" placeholder="Username" name="email" onChange={this.handleLoginChange} />
                             </div>
                             <div className="form-group">
-                                <input type="passsword" name="password" className="form-control" placeholder="Password" />
+                                <input type="passsword" name="password" className="form-control" placeholder="Password" name="password" onChange={this.handleLoginChange} />
                             </div>
                         </div>
 
                         <div className="modal-footer">
-                            <button type="submit" className="btn btn-sucess">Sign In</button>
+                            <button onClick={this.loginUser} className="btn btn-sucess">Sign In</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
-    )
-
+             
+        )
+    }
 }
+
 
 export default LoginModal;
