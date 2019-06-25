@@ -38,7 +38,6 @@
     "passport-local": "^1.0.0",
     "react-html5-camera-photo": "^1.4.3",
     "sequelize": "^5.8.10"
-
   },
   "repository": {
     "type": "git",
