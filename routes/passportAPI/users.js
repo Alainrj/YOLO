@@ -1,36 +1,17 @@
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const passport = require('passport');
 const express = require('express');
 
 const router = express.Router();
 const auth = require('../auth');
-const Users = mongoose.model('Users');
+//const Users = mongoose.model('Users');
+const Users = require('../../models/user');
 
 //POST new user route (optional, everyone has access)
 router.get('/test-route', function(req, res) {
     res.json('ROUTE WORKS!')
 })
-/*
-router.post('/', auth.optional, (req,res, next) => {
-    const {body:{user}} = req;
 
-    if(!user.email) {
-        return res.status(422).json({
-            errors: {
-                email: 'is required',
-            },  
-        });
-    }
-
-    const finalUser = new Users(user);
-
-    finalUser.setPassword(user.password);
-
-    return finalUser.save()
-        .then(() => res.json({user:finalUser.toAuthJSON()}))
-
-});
-*/
 
 //POST login route (optional, everyone has access)
 router.post('/', auth.optional,(req,res, next) => {
@@ -59,16 +40,6 @@ finalUser.save().then(userWithPW => {
     
     res.json({ user: finalUser.toAuthJSON() })
 })
-// console.log('before save', user)
-// finalUser.save(function(err, mongoUSer) {
-//     console.log('HIT A SNAG!')
-//     console.log('MONGO USER', mongoUSer)
-// })
-// finalUser.save()
-// .then((mongoUser) => {
-//     console.log('after save', mongoUser)
-//     res.json({ user: finalUser.toAuthJSON() })
-// });
 
 });
 

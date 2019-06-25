@@ -9,9 +9,15 @@ const { Schema } = mongoose;
 //This will later be used to validate the user.
 
 const UserSchema = new Schema ({
+    fistName: String,
+    lastName: String,
     email: String,
     hash: String,
     salt: String,
+    age: String,
+    heightFeet: String,
+    heightInch: String,
+    weight: String,
 });
 
 UserSchema.methods.setPassword = function(password) {
@@ -40,10 +46,17 @@ UserSchema.methods.generateJWT = function() {
 
 UserSchema.methods.toAuthJSON = function () {
     return {
+        firstName: this.firstName,
+        lastName: this.lastName,
         _id: this._id,
         email: this.email,
+        age: this.age,
+        heightFeet: this.heightFeet,
+        heightInch: this.heightInch,
+        weight: this.weight,
         // token: this.generateJWT(),
     };
 };
 
-mongoose.model('Users', UserSchema);
+const Users = mongoose.model('Users', UserSchema);
+module.exports = Users;
