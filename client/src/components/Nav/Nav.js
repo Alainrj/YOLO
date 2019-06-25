@@ -1,7 +1,11 @@
 import React from "react";
+
 import LoginModal from "./components/LoginModal"
 import RegisterModal from "./components/RegisterModal"
+import { detect } from 'detect-browser';
 import "./Nav.css";
+const browser = detect();
+window.browserDetect = browser;
 
 function Nav() {
     return (
@@ -29,7 +33,19 @@ function Nav() {
         </div>
 
 
-
+                        <div className="modal-footer">
+                            <button type="submit" className="btn btn-sucess">Create an Account</button>
+                        </div>
+                        {
+                            (browser.os === 'iOS' || browser.os === 'Android OS')
+                                ? <div>Mobile Camera</div>
+                                : <div>Desktop Camera</div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     );
 }
 
