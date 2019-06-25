@@ -25,4 +25,4 @@ class About extends Component {
   }
 }
 
-export default Aboutus;
+export default About;

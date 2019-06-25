@@ -9,6 +9,7 @@ window.browserDetect = browser;
 
 function Nav() {
     return (
+        <>
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <a href="/">LOGO</a>
@@ -31,7 +32,7 @@ function Nav() {
             <LoginModal />
             <RegisterModal />
         </div>
-
+<div>
 
                         <div className="modal-footer">
                             <button type="submit" className="btn btn-sucess">Create an Account</button>
@@ -42,10 +43,8 @@ function Nav() {
                                 : <div>Desktop Camera</div>
                         }
                     </div>
-                </div>
-            </div>
-        </div>
-        
+       
+        </>
     );
 }
 
