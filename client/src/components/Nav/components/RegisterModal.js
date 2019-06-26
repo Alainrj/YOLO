@@ -60,6 +60,14 @@ class RegisterModal extends React.Component {
                                     <span className="input-group-text" id="inputGroup-sizing-default">Age</span>
                                 </div>
                                 <input type="text" className="form-control" aria-label="Age" aria-describedby="inputGroup-sizing-default" placeholder="Age" name="age" onChange={this.handleInputChange} />
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="m">Male</option>
+                                    <option value="f">Female</option>
+                                </select>
                             </div>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">

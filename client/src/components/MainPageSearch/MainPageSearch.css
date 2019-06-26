@@ -1,5 +1,5 @@
 body{
-    height: 1200px;
+    height: 100%;
 }
 #bannerImg {
     width:100%;
@@ -7,13 +7,31 @@ body{
 #banner {
     margin: 20px;
 }
-#mainPageArea {
+#mainPageArea1 {
     border: 1px solid gray;
-    height: 700px;
+    height: 800px;
     padding: 20px;
+    background-color: #FFF7D6;
+}
+
+#mainPageArea2 {
+    border: 1px solid gray;
+    height: 800px;
+    padding: 20px;
+    background-color: #E3E5A0;
+}
+
+#mainPageArea3 {
+    border: 1px solid gray;
+    height: 800px;
+    padding: 20px;
+    background-color: #EEF7BC;
 }
 #mainPageTitle {
-    height: 80px;
-    border: 1px solid gray;
     text-align: center;
+}
+
+#mainPageSubtitle {
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
 }
