@@ -19,7 +19,7 @@ class About extends Component {
   render() {
     return (
         <div>
-          <AboutNav />
+          {/* <AboutNav /> */}
           <Container>
             <Aboutus></Aboutus>
           </Container>

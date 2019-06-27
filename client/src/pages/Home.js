@@ -14,7 +14,6 @@ class Home extends Component {
   render() {
     return (
      <>
-      <Nav />
       <Container>
         <MainPageSearch></MainPageSearch>
       </Container>

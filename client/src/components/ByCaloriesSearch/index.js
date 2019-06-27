@@ -12,7 +12,7 @@ import API from '../../utils/API'
 import axios from 'axios'
 
 
-class MainSearch extends Component {
+class ByCaloriesSearch extends Component {
   constructor(props) {
     super(props);
     this.handleSearchClick = this.handleSearchClick.bind(this);
@@ -263,4 +263,4 @@ class MainSearch extends Component {
   }
 }
 
-export default MainSearch;
+export default ByCaloriesSearch;
