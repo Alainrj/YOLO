@@ -1,6 +1,5 @@
 #dailyGraph {
     height: 200px;
-    border: 1px solid gray;
     margin: 20px;
 }
 
@@ -12,4 +11,5 @@
 
 #graphContainer {
     border: 1px solid gray;
+    height: 550px;
 }
