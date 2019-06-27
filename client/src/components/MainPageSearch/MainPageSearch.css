@@ -8,22 +8,19 @@ body{
     margin: 20px;
 }
 #mainPageArea1 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #FFF7D6;
 }
 
 #mainPageArea2 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #E3E5A0;
 }
 
 #mainPageArea3 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #EEF7BC;
 }
@@ -34,4 +31,8 @@ body{
 #mainPageSubtitle {
     text-align: left;
     font-family: 'Raleway', sans-serif;
+}
+
+div#mainPageOutline.col-md-4{
+    padding: 3px;
 }

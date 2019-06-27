@@ -13,3 +13,11 @@ nav {
     overflow: hidden;
     margin-top: -6px;
 }
+
+div#bigImage {
+    background-image: url("../../images/catering-2778755_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
