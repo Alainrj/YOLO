@@ -8,24 +8,24 @@ body{
     margin: 20px;
 }
 #mainPageArea1 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #FFF7D6;
+    height: 700px;
 }
 
 #mainPageArea2 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #E3E5A0;
+    height: 700px;
 }
 
 #mainPageArea3 {
-    border: 1px solid gray;
-    height: 800px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #EEF7BC;
+    height: 700px;
 }
 #mainPageTitle {
     text-align: center;
@@ -34,4 +34,20 @@ body{
 #mainPageSubtitle {
     text-align: left;
     font-family: 'Raleway', sans-serif;
+}
+
+div#mainPageOutline.col-md-4 {
+    padding: 3px;
+}
+
+button.btn.btn-outline-secondary {
+    color: #3E4032;
+}
+
+h2#mainPageTitle {
+    color: #3E4032;
+}
+
+h5#mainPageSubtitle {
+    color: #3E4032;
 }

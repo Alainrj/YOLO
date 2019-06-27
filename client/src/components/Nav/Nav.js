@@ -10,7 +10,7 @@ window.browserDetect = browser;
 function Nav() {
     return (
         <>
-        <div>
+        <div class="big-image">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="/">
