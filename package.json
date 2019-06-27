@@ -20,6 +20,7 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "ajax": "0.0.4",
     "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "chart.js": "^2.8.0",
