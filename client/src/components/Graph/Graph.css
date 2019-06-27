@@ -1,0 +1,15 @@
+#dailyGraph {
+    height: 200px;
+    border: 1px solid gray;
+    margin: 20px;
+}
+
+#graphTitle {
+    margin: 20px;
+    text-align: center;
+
+}
+
+#graphContainer {
+    border: 1px solid gray;
+}

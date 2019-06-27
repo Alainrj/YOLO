@@ -1,0 +1,15 @@
+.foodItemRow {
+    /* border:solid #C4C2BD; */
+    margin: 1rem .1rem 0 .1rem;
+    
+}
+
+.foodItemCol {
+    border: .001rem solid #C4C2BD;
+    padding: .4rem;
+    /* border-style: solid; */
+    /* border-left: 2px; */
+    /* border-right: 2px; */
+    /* border-top: 1px; */
+    /* border: 1px solid #C4C2BD; */
+}

@@ -1,3 +1,14 @@
 #aboutContainer {
     border: 1px solid gray;
+    margin: 20px;
+}
+#aboutTitle {
+    border: 1px solid gray;
+    margin: 20px;
+    height: 80px;
+}
+
+p {
+    border: 1px solid gray;
+    padding: 20px;
 }

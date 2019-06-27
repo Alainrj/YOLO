@@ -11,28 +11,46 @@ function Nav() {
     return (
         <>
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark">
-                <a href="/">LOGO</a>
-                <ul className="nav justify-content-end">
-                    <li className="nav-item">
-                        <a id="navTitle" className="nav-link active" href="/about">ABOUT</a>
-                    </li>
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#loginModal">Log In</button>
-                    </li>
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal">Register</button>
-                    </li>
-                    <li className="nav-item">
-                        <a id="navTitle" className="nav-link" href="/mypage">My Page </a>
-                    </li>
-                </ul>
-            </nav>
 
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">
+                    <div class="logo-image">
+                        <img src="./img/Yolo.png" class="img-fluid" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
+                        </li>
+                        <li class="nav-item">
+                          <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Log In</button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal"><i class="fas fa-user-plus"></i> Register</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
             <LoginModal />
             <RegisterModal />
         </div>
-<div>
+{/* <div>
 
                         <div className="modal-footer">
                             <button type="submit" className="btn btn-sucess">Create an Account</button>
@@ -42,7 +60,7 @@ function Nav() {
                                 ? <div>Mobile Camera</div>
                                 : <div>Desktop Camera</div>
                         }
-                    </div>
+                    </div> */}
        
         </>
     );

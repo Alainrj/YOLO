@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Client from "./pages/Client";
-import Nav from "./components/Nav";
+import Search from "./pages/Search";
+// import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Nav from './components/Nav'
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/mypage" component={Client} />
           <Route exact path="/mypage/:id" component={Client} />
+          <Route exact path="/mainsearch" component={Search} />
         </Switch>
         <Footer />
       </div>
