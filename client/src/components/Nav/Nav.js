@@ -15,7 +15,7 @@ function Nav() {
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="/">
                     <div class="logo-image">
-                        <img src="../../../img/Yolo.png" class="img-fluid" />
+                        <img src="./img/Yolo.png" class="img-fluid" />
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +29,11 @@ function Nav() {
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
-                        <li className="nav-item">
-                            <a id="navTitle" className="nav-link" href="/mypage">My Page </a>
+                        <li class="nav-item">
+                            <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
                         </li>
-                        <li className="nav-item">
-                          <a id="navTitle" className="nav-link" href="/mainsearch">Main search</a>
+                        <li class="nav-item">
+                          <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
