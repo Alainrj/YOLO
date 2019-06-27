@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 
 class RegisterModal extends React.Component {
     state = {
@@ -16,11 +17,12 @@ class RegisterModal extends React.Component {
         const { name, value } = event.target;
         this.setState({
             [name]: value
-        }, ()=>console.log(this.state))
+        }, () => console.log(this.state))
     }
 
     registerUser = () => {
-        console.log("BUILD SUBMIT API HERE")
+        const signUpInfo = this.state
+        axios.post("/auth/signup", signUpInfo)
     }
 
     render() {
@@ -38,7 +40,7 @@ class RegisterModal extends React.Component {
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="">Last and First Name</span>
                                 </div>
-                                <input type="text" className="form-control" placeholder="Last Name" name="lastName" onChange={this.handleInputChange}/>
+                                <input type="text" className="form-control" placeholder="Last Name" name="lastName" onChange={this.handleInputChange} />
                                 <input type="text" className="form-control" placeholder="First Name" name="firstName" onChange={this.handleInputChange} />
                             </div>
                             <div className="input-group mb-3">
@@ -60,6 +62,14 @@ class RegisterModal extends React.Component {
                                     <span className="input-group-text" id="inputGroup-sizing-default">Age</span>
                                 </div>
                                 <input type="text" className="form-control" aria-label="Age" aria-describedby="inputGroup-sizing-default" placeholder="Age" name="age" onChange={this.handleInputChange} />
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="m">Male</option>
+                                    <option value="f">Female</option>
+                                </select>
                             </div>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">

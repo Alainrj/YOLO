@@ -6,13 +6,13 @@ function Calender() {
         <div className="container" id="dailyCalender">
             <h2 id="clientPageTitle">Daily Calories Calender</h2>
             <div className="row" id="calenderContainer">
-                <div className="col-md-1" id="sun">Sun</div>
-                <div className="col-md-1" id="sun">Mon</div>
-                <div className="col-md-1" id="sun">Tue</div>
-                <div className="col-md-1" id="sun">Wed</div>
-                <div className="col-md-1" id="sun">Thurs</div>
-                <div className="col-md-1" id="sun">Fri</div>
-                <div className="col-md-1" id="sun">Sat</div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Sun</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Mon</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Tue</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Wed</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Thur</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Fri</button></div>
+                <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Sat</button></div>
             </div>
             <div className="row" id="calenderContainer">
                 <div className="col-md-5" id="containerBorder">
