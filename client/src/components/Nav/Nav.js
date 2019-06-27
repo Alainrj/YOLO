@@ -26,6 +26,9 @@ function Nav() {
                     <li className="nav-item">
                         <a id="navTitle" className="nav-link" href="/mypage">My Page </a>
                     </li>
+                    <li className="nav-item">
+                        <a id="navTitle" className="nav-link" href="/mainsearch">Main search</a>
+                    </li>
                 </ul>
             </nav>
 

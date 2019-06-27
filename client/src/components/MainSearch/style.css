@@ -1,0 +1,39 @@
+.MainSearch {
+    text-align: center;
+  }
+  
+  .MainSearch-header {
+    /* background-color: #282c34; */
+    /* background-color: #DADADA; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #5C5C5C;
+  }
+  
+  #txtSearch {
+    border-right: 0;
+    height: 3rem;
+  }
+  
+  .btnLocation {
+    border-color: '#CFD4D9';
+    border-left: 'none';
+    border-right: 'none'; 
+    border-radius: 0;
+    background-color: transparent
+  }
+  
+  .mainSearchButton:focus {outline:0;}
+  
+  .MainSearch-link {
+    color: #61dafb;
+  }
+  
+  .imgArrow {
+    width: 30px;
+    height: 30px;
+  }
