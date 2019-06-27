@@ -1,0 +1,27 @@
+footer {
+    background-color: #3E4032;
+    margin-top: 20px;
+}
+
+h5.text-uppercase {
+    color: white;
+
+}
+h2.text-uppercase {
+    color: white;
+    text-align: center;
+}
+
+#footerList {
+    color: white;
+}
+
+#footerList2 {
+    color: white;
+    text-align: center;
+}
+
+#subscribeInput {
+    position: relative;
+    top: 20px;
+}
