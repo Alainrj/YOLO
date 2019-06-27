@@ -11,6 +11,7 @@ function Nav() {
     return (
         <>
         <div>
+
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="/">
                     <div class="logo-image">
@@ -31,6 +32,9 @@ function Nav() {
                         <li className="nav-item">
                             <a id="navTitle" className="nav-link" href="/mypage">My Page </a>
                         </li>
+                        <li className="nav-item">
+                          <a id="navTitle" className="nav-link" href="/mainsearch">Main search</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -41,6 +45,7 @@ function Nav() {
                         </li>
                     </ul>
                 </div>
+
             </nav>
             <LoginModal />
             <RegisterModal />
