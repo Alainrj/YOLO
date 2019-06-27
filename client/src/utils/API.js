@@ -7,8 +7,8 @@ import ajax from 'ajax'
 const credentials = {
 
     // Alan
-    // 'x-app-id': 'a49cbcf2',
-    // 'x-app-key': '8fbb4486f5134e84e81d6f3918835982'
+    'x-app-id': 'a49cbcf2',
+    'x-app-key': '8fbb4486f5134e84e81d6f3918835982'
 
     // Camilo
     // 'x-app-id': '7af0b356',
@@ -16,8 +16,8 @@ const credentials = {
     // 'x-app-key': '6dd125bab9d995bde5f71cc6399ddbd8'
 
     // Rob
-    'x-app-id': 'e0a12c3e',
-    'x-app-key': 'ecea00b679c66c1d11b141d4833d152d',
+    // 'x-app-id': 'e0a12c3e',
+    // 'x-app-key': 'ecea00b679c66c1d11b141d4833d152d',
 }
 
 export default {
@@ -62,7 +62,7 @@ export default {
         return axios(config)
     },
 
-    getFoodItemByItemId: (itemId) => {
+    getFoodItemByItemId: function (itemId) {
 
         const config = {
             headers: Object.assign({}, credentials),
@@ -77,37 +77,58 @@ export default {
         return axios(config)
     },
 
-    getDailyCalories: () => {
-
-        // const url = `https://www.calculator.net/calorie-calculator.html?ctype=standard&cage=${this.state.age}&csex=${this.state.gender}&cheightfeet=${this.state.heightFeet}&cheightinch=${this.state.heightInch}&cpound=${this.state.weight}&cactivity=1.465&cmop=0&coutunit=c&cformula=m&cfatpct=20&printit=0&x=64&y=18`
-        const url = "https://www.calculator.net/calorie-calculator.html?ctype=standard&cage=23&csex=m&cheightfeet=11&cheightinch=0&cpound=112&cactivity=1.465&cmop=0&coutunit=c&cformula=m&cfatpct=20&printit=0&x=64&y=18"
-        // const url = "http://www.google.com"
-
-        console.log("look at this", url)
+    getFoodByQuery: async (query) => {
+        // We have to add this url before to avoid the CROS policy issues
+        const preUrl = 'https://cors-anywhere.herokuapp.com/'
 
         const config = {
-            headers: { "Access-Control-Allow-Origin": "*" },
-            url: url,
+            headers: Object.assign({}, credentials),
+            url: `https://trackapi.nutritionix.com/v2/search/instant`,
+            // nix_item_id: itemId,
+            line_delimited: false,
+            query: "burger",
+            params: {
+                query: query,
+                branded: true,
+                self: true,
+                common: true,
+                // brand_ids: brandIds,
+                branded_region: 1,
+            },
+            // query: query,
+            // timezone: "America/New_York",
+            // use_branded_foods: false,
+            // use_raw_foods: false,
             method: 'GET',
-            crossorigin: true   ,
-            // contentType: 'application/json',
-            // crossDomain: true,
+            contentType: 'application/json',
         }
 
-        return axios(config).then((response, err) => {
-            console.log('response', response)
-            console.log('error', err)
-
-            // return axios.post(url, { crossDomain: false })
-            // return ajax.get(url, function (response, err) {
-            // const $ = cheerio.load(response.data);
-
-            // console.log('response', response)
-            // console.log('error', err)
-            //   console.log('take a look',$)
+        axios(config).then(result => {
 
 
+            for (let i = 0; i < 5; i++) {
+                const element = result.data.branded[i]
+            
+                console.log(element);
+                const itemId = element.nix_item_id;
+
+                const config = {
+                    headers: Object.assign({}, credentials),
+                    url: `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${itemId}`,
+                    // nix_item_id: itemId,
+                    upc: 0,
+                    claims: true,
+                    method: 'GET',
+                    contentType: 'application/json',
+                }
+
+                // return axios(config).then()
+                axios(config).then(res => {
+                    console.log(res.data.foods[0].food_name)
+                    console.log(res.data.foods[0].nf_calories)
+                })
+
+            };
         })
-
     }
 }

@@ -251,8 +251,7 @@ class ByCaloriesSearch extends Component {
             <br></br>
             {this.state.restaurants.map(restaurant => <Restaurants onClick={this.itemDetailsClick} restaurantInfo={restaurant} />)}
           </div>
-          </header>
-        {/* Modal window whit food information */}
+          </header>        
         <FoodItemModal
           foodInfo={this.state.foodInfo}
           show={this.state.modalShow}

@@ -6,7 +6,7 @@ import './style.css'
 // import ModalTitle from 'react-bootstrap/ModalTitle'
 
 class FoodItemModal extends React.Component {
-  constructor(){
+  constructor() {
     super();
   }
   render() {
@@ -140,7 +140,6 @@ class FoodItemModal extends React.Component {
             </div>
           </div>
           <br></br>
-          <button className='btn btn-outline-secondary btn-block btn-sm'>Full nutrients list</button>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>

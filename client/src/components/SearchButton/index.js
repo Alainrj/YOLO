@@ -2,7 +2,7 @@ import React from 'react';
 
 export default (props) => (
   <div>
-    <button className='btn-primary' onClick={props.onClick} >Search</button>
-    <i className="fa fa-search" aria-hidden="true"></i>
+    <button className='btn btn-lg' onClick={props.onClick} ><i className="fa fa-search" aria-hidden="false"></i>
+    </button>
   </div>
 );
