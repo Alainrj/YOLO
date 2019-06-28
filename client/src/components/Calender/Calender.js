@@ -4,8 +4,12 @@ import "./Calender.css";
 function Calender() {
     return (
         <div className="container" id="dailyCalender">
-            <h2 id="clientPageTitle">Daily Calories Calender</h2>
-            <div className="row" id="calenderContainer">
+            <div id="calenderBigTitle">
+                <h2 id="calenderTitle">Calender</h2>
+                <h5 id="calenderSubtitle">Daily Calories</h5>
+            </div>
+            <div id="calenderContainer">
+            <div className="row" >
                 <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Sun</button></div>
                 <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Mon</button></div>
                 <div className="col-md-1" id="day"><button type="button" class="btn btn-info">Tue</button></div>
@@ -47,10 +51,12 @@ function Calender() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div id="summaryCalender">
                 <span>On (date), you ate (total calories)</span>
                 <br/>
                 <span>(Remainning Calories) to 1. maintain 2. lose your weight</span>
+            </div>
+
             </div>
         </div>
     );

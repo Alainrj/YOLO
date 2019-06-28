@@ -89,94 +89,112 @@ class DailyCaloriesCal extends React.Component {
         console.log('state', this.state)
         return (
             <div className="container" id="dailyCalculator">
+                <div id="dailyMainTitle">
+                    <h2 id="appTitle">
+                        My Page _
+                    </h2>
+                    <h5 id="appSubtitle">
+                        You can check your daily calories.
+                    </h5>
+                </div>
                 <div className="row">
                     <div className="col-md-6" id="dailyCalculatorContents">
-                        <h2 id="clientPageTitle">Daily Calories Calculator</h2>
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="age">Age</span>
-                            </div>
-                            <input type="text" className="form-control" aria-label="ageInput" aria-describedby="ageInput" name="age" value={this.state.age} placeholder="age" onChange={this.handleInputChange} />
-                            <div className="input-group-prepend">
-                                <label className="input-group-text" for="gender">Gender</label>
-                            </div>
-                            <select className="custom-select" id="gender" onChange={this.handleDropDownChange}  >
-                                <option selected >Choose...</option>
-                                <option value="m"  >Male</option>
-                                <option value="f"  >Female</option>
-                            </select>
-                            <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text">Height</span>
+                        <div id="dailyCalculatorContents1">
+                            <h2 id="dailyContentTitle">Daily Calories</h2>
+                            <h5 id="dailyContentSubtitle">Calculator</h5>
+                            <div id="dailyInputContainer">
+                                <div className="input-group mb-3">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text" id="age">Age</span>
+                                    </div>
+                                    <input type="text" className="form-control" aria-label="ageInput" aria-describedby="ageInput" name="age" value={this.state.age} placeholder="age" onChange={this.handleInputChange} />
+                                    <div className="input-group-prepend">
+                                        <label className="input-group-text" for="gender">Gender</label>
+                                    </div>
+                                    <select className="custom-select" id="gender" onChange={this.handleDropDownChange}  >
+                                        <option selected >Choose...</option>
+                                        <option value="m"  >Male</option>
+                                        <option value="f"  >Female</option>
+                                    </select>
                                 </div>
-                                <input type="text" aria-label="Feets" className="form-control" name="heightFeet" value={this.state.heightFeet} placeholder="feet" onChange={this.handleInputChange} />
-                                <input type="text" aria-label="Inches" className="form-control" name="heightInch" value={this.state.heightInch} placeholder="inches" onChange={this.handleInputChange} />
-                            </div>
-                            <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text">Weight</span>
+                                <div className="input-group mb-3">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Height</span>
+                                    </div>
+                                    <input type="text" aria-label="Feets" className="form-control" name="heightFeet" value={this.state.heightFeet} placeholder="ft" onChange={this.handleInputChange} />
+                                    <input type="text" aria-label="Inches" className="form-control" name="heightInch" value={this.state.heightInch} placeholder="inch" onChange={this.handleInputChange} />
                                 </div>
-                                <input type="text" aria-label="Pounds" className="form-control" name="weight" value={this.state.weight} placeholder="pounds" onChange={this.handleInputChange} />
-                            </div>
-                            <div className="mx-auto" id="clientBtnDiv">
-                                <button id="clientBtn" type="button" className="btn btn-info" onClick={this.scrapeSearch} >Search</button>
-                                <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
+                                <div className="input-group mb-3">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Weight</span>
+                                    </div>
+                                    <input type="text" aria-label="Pounds" className="form-control" name="weight" value={this.state.weight} placeholder="lbs" onChange={this.handleInputChange} />
+                                </div>
+                                <div className="mx-auto" id="clientBtnDiv">
+                                    <button id="clientBtn" type="button" className="btn btn-info" onClick={this.scrapeSearch} >Search</button>
+                                    <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6" id="dailyCalculatorContents">
-                        <h2 id="clientPageTitle">Suggested Daily Calories Results</h2>
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th className="text-center" scope="col">Maintain weight</th>
-                                    <th className="text-center" scope="col">Mild weight loss</th>
-                                    <th className="text-center" scope="col">Weight loss</th>
-                                    <th className="text-center" scope="col">Extreme weight loss</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className='text-center'>
-                                        <br></br>
-                                        <span>{this.state.results[0].calories}</span>
-                                        <br></br>
-                                        <small className='text-secondary'>Calories/day</small>
-                                        <br></br>
-                                        <br></br>
-                                        <span>{this.state.results[0].percent}</span>
-                                    </td>
-                                    <td className='text-center'>
-                                        <br></br>
-                                        <span>{this.state.results[1].calories}</span>
-                                        <br></br>
-                                        <small className='text-secondary'>Calories/day</small>
-                                        <br></br>
-                                        <br></br>
-                                        <span>{this.state.results[1].percent}</span>
-                                    </td>
-                                    <td className='text-center'>
-                                        <br></br>
-                                        <span>{this.state.results[2].calories}</span>
-                                        <br></br>
-                                        <small className='text-secondary'>Calories/day</small>
-                                        <br></br>
-                                        <br></br>
-                                        <span>{this.state.results[2].percent}</span>
-                                    </td>
-                                    <td className='text-center'>
-                                        <br></br>
-                                        <span>{this.state.results[3].calories}</span>
-                                        <br></br>
-                                        <small className='text-secondary'>Calories/day</small>
-                                        <br></br>
-                                        <br></br>
-                                        <span>{this.state.results[3].percent}</span>
-                                        <br></br>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="dailyCalculatorContents2">
+                            <h2 id="dailyContentTitle">Suggested</h2>
+                            <h5 id="dailyContentSubtitle">Daily Calories Results</h5>
+                            <div id="dailyInputContainer">
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th className="text-center" scope="col">Maintain weight</th>
+                                            <th className="text-center" scope="col">Mild weight loss</th>
+                                            <th className="text-center" scope="col">Weight loss</th>
+                                            <th className="text-center" scope="col">Extreme weight loss</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className='text-center'>
+                                                <br></br>
+                                                <span>{this.state.results[0].calories}</span>
+                                                <br></br>
+                                                <small className='text-secondary'>Calories/day</small>
+                                                <br></br>
+                                                <br></br>
+                                                <span>{this.state.results[0].percent}</span>
+                                            </td>
+                                            <td className='text-center'>
+                                                <br></br>
+                                                <span>{this.state.results[1].calories}</span>
+                                                <br></br>
+                                                <small className='text-secondary'>Calories/day</small>
+                                                <br></br>
+                                                <br></br>
+                                                <span>{this.state.results[1].percent}</span>
+                                            </td>
+                                            <td className='text-center'>
+                                                <br></br>
+                                                <span>{this.state.results[2].calories}</span>
+                                                <br></br>
+                                                <small className='text-secondary'>Calories/day</small>
+                                                <br></br>
+                                                <br></br>
+                                                <span>{this.state.results[2].percent}</span>
+                                            </td>
+                                            <td className='text-center'>
+                                                <br></br>
+                                                <span>{this.state.results[3].calories}</span>
+                                                <br></br>
+                                                <small className='text-secondary'>Calories/day</small>
+                                                <br></br>
+                                                <br></br>
+                                                <span>{this.state.results[3].percent}</span>
+                                                <br></br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
 #dailyCalender {
     margin: 20px 0;
-    border: 1px solid gray;
     padding: 20px;
 }
 
@@ -18,7 +17,7 @@
 }
 
 #containerBorder {
-    border: 1px solid gray;
+
 }
 
 #calenderContent {
@@ -35,4 +34,32 @@ button.btn.btn-info {
 }
 div#calenderContainer.row {
     padding-bottom: 10px;
+}
+
+#calenderTitle {
+    font-size: 50px;
+    margin: 20px;
+    text-align: left;
+    color: #3E4032;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 30px;
+
+}
+
+#calenderSubtitle {
+    font-size: 23px;
+    text-align: left;
+    color: #3E4032;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 200px;
+    bottom: 25px;
+}
+
+#summaryCalender {
+    border-top: 2px solid #3E4032;
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
 }
