@@ -73,7 +73,6 @@ class RegisterModal extends React.Component {
                                     <span className="input-group-text" id="inputGroup-sizing-default">Age</span>
                                 </div>
                                 <input type="text" className="form-control" aria-label="Age" aria-describedby="inputGroup-sizing-default" placeholder="Age" name="age" onChange={this.handleInputChange} />
-                                {/* <input type="text" className="form-control" aria-label="Age" aria-describedby="inputGroup-sizing-default" placeholder="Age" name="age" onChange={this.handleInputChange} /> */}
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="inputGroupSelect01">Gender</label>
                                 </div>
@@ -83,22 +82,23 @@ class RegisterModal extends React.Component {
                                     <option value="f">Female</option>
                                 </select>
                             </div>
-                        </div>
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="inputGroup-sizing-default">Height</span>
-                            </div>
-                            <input type="text" className="form-control" aria-label="HeightF" aria-describedby="inputGroup-sizing-default" placeholder="Feet" name="heightFeet" onChange={this.handleInputChange} />
-                            <input type="text" className="form-control" aria-label="HeightI" aria-describedby="inputGroup-sizing-default" placeholder="Inches" name="heightInches" onChange={this.handleInputChange} />
 
 
-                        </div>
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="inputGroup-sizing-default">Weight</span>
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="inputGroup-sizing-default">Height</span>
+                                </div>
+                                <input type="text" className="form-control" aria-label="HeightF" aria-describedby="inputGroup-sizing-default" placeholder="Feet" name="heightFeet" onChange={this.handleInputChange} />
+                                <input type="text" className="form-control" aria-label="HeightI" aria-describedby="inputGroup-sizing-default" placeholder="Inches" name="heightInches" onChange={this.handleInputChange} />
                             </div>
-                            <input type="text" className="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-default" placeholder="Height  Pounds" name="weight" onChange={this.handleInputChange} />
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="inputGroup-sizing-default">Weight</span>
+                                </div>
+                                <input type="text" className="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-default" placeholder="Height  Pounds" name="weight" onChange={this.handleInputChange} />
+                            </div>
                         </div>
+
                         <div className="modal-footer">
                             <button onClick={this.registerUser} className="btn btn-sucess">Create an Account</button>
                         </div>

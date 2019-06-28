@@ -12,14 +12,14 @@ export const colourOptions = [
 ];
 
 export const foods = [
-    { value: 'salad', label: 'Salad', color: '#00B8D9', },
-    { value: 'chicken', label: 'Chicken', color: '#00B8D9', },
-    { value: 'beef', label: 'Beef', color: '#00B8D9', },
-    { value: 'fish', label: 'Fish', color: '#00B8D9', },
-    { value: 'soup', label: 'Soup', color: '#00B8D9', },
-    { value: 'sandwich', label: 'Sandwich', color: '#00B8D9', },
+    { value: 'salad', label: 'Salad', color: '#667484', },
+    { value: 'chicken', label: 'Chicken', color: '#667484', },
+    { value: 'beef', label: 'Beef', color: '#667484', },
+    { value: 'fish', label: 'Fish', color: '#667484', },
+    { value: 'soup', label: 'Soup', color: '#667484', },
+    { value: 'sandwich', label: 'Sandwich', color: '#667484', },
     // { value: 'drink', label: 'Drink', color: '#00B8D9', },
-    { value: 'lamb', label: 'Lamb', color: '#00B8D9', },
+    { value: 'lamb', label: 'Lamb', color: '#667484', },
 ]
 
 export const stateOptions = [

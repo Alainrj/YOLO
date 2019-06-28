@@ -1,39 +1,61 @@
 .MainSearch {
-    text-align: center;
-  }
-  
-  .MainSearch-header {
-    /* background-color: #282c34; */
-    /* background-color: #DADADA; */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #5C5C5C;
-  }
-  
-  #txtSearch {
-    border-right: 0;
-    height: 3rem;
-  }
-  
-  .btnLocation {
-    border-color: '#CFD4D9';
-    border-left: 'none';
-    border-right: 'none'; 
-    border-radius: 0;
-    background-color: transparent
-  }
-  
-  .mainSearchButton:focus {outline:0;}
-  
-  .MainSearch-link {
-    color: #61dafb;
-  }
-  
-  .imgArrow {
-    width: 30px;
-    height: 30px;
-  }
+  text-align: center;
+}
+
+.MainSearch-header {
+  /* background-color: #282c34; */
+  /* background-color: #DADADA; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #5C5C5C;
+}
+
+.multiSelect {
+  width: 100%;
+}
+
+.inputCalories {
+  width:100%;
+}
+
+.cardTitle{
+  background-color: #E80C7A;
+  color:#ffffff;
+}
+
+.pic-container {
+  width: 100%;
+  height: 330px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+
+#txtSearch {
+  border-right: 0;
+  height: 3rem;
+}
+
+.btnLocation {
+  border-color: '#CFD4D9';
+  border-left: 'none';
+  border-right: 'none';
+  border-radius: 0;
+  background-color: transparent
+}
+
+.mainSearchButton:focus {
+  outline: 0;
+}
+
+.MainSearch-link {
+  color: #61dafb;
+}
+
+.imgArrow {
+  width: 30px;
+  height: 30px;
+}

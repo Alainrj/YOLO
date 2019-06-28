@@ -29,7 +29,7 @@ class ByCaloriesSearch extends Component {
     this.state = {
       modalShow: false,
       restaurants: [],
-      foodInfo:{},
+      foodInfo: {},
       querySearch: "",
       calories: 0,
       location: '',
@@ -133,9 +133,12 @@ class ByCaloriesSearch extends Component {
   }
 
   onChangeSelect(result) {
-    this.setState({
-      querySearch: result.map(item => item.value).toString(),
-    });
+    if (result != "") {
+
+      this.setState({
+        querySearch: result.map(item => item.value).toString(),
+      });
+    }
   }
 
   handleOnChangeCalories(event) {
@@ -212,9 +215,9 @@ class ByCaloriesSearch extends Component {
     API.getFoodItemByItemId(itemId.toString()).then(result => {
       console.log("Result", result)
 
-      this.setState({ 
-        foodInfo : result.data.foods[0],
-        modalShow: true 
+      this.setState({
+        foodInfo: result.data.foods[0],
+        modalShow: true
       })
     })
   }
@@ -223,41 +226,64 @@ class ByCaloriesSearch extends Component {
 
   render() {
     return (
-      <div className="MainSearch">
-        <header className="MainSearch-header">
-          <div>
+      <div>
+        <br></br>
+        <br></br>
+        <div className="row" id="dailyCalculatorContents">
+          {/* <div className="row" id="clientPageTitle"> */}
+          <div className='col-12'>
             <div className="input-group mb-3">
               <input id="txtSearch" type="text" className="form-control" placeholder="Search by zip code, City or address" onChange={this.locationChange} required />
               <div className="input-group-append">
                 <button className="btn-ouline-light btn-sm btnLocation mainSearchButton" type="submit" onClick={this.locationClick}><img className="imgArrow" srcSet='././img/locationarrow.png' alt=""></img></button>
-                <button className="btn btn-primary" type="submit" id="insert" onClick={this.locationSearchClick}>Search</button>
+                <SearchButton onClick={this.locationSearchClick}></SearchButton>
               </div>
             </div>
-            <div style={{ height: '450px', width: '600px' }}>
+          </div>
+        </div>
+        <br></br>
+        <div className="row">
+          <div className='col-6' id="dailyCalculatorContents">
+            <div style={{ height: '450px', width: '500px' }}>
               {this.state.myPlace.map(place => <Map lat={place.lat} lng={place.lng} name={place.name} zoom={place.zoom}></Map>)}
             </div>
-            <br></br>
-            <div className='row'>
-              <div className='col-6'>
-                <MultiSelect onChange={this.onChangeSelect}></MultiSelect>
-              </div>
-              <div className='col-4'>
-                <InputCalories onChange={this.handleOnChangeCalories}></InputCalories>
-              </div>
-              <div className='col-2'>
-                <SearchButton onClick={this.handleSearchClick}></SearchButton>
+          </div>
+
+          <div className='col-6' id="dailyCalculatorContents">
+            <div className="row">
+              <div className="col-12">
+                <MultiSelect className="multiSelect" onChange={this.onChangeSelect}></MultiSelect>
               </div>
             </div>
             <br></br>
-            {this.state.restaurants.map(restaurant => <Restaurants onClick={this.itemDetailsClick} restaurantInfo={restaurant} />)}
-          </div>
-          </header>        
+            <div className="row">
+              <div className="col-8">
+                <InputCalories className="inputCalories" placeholder="Calories" onChange={this.handleOnChangeCalories}></InputCalories>
+              </div>
+              <div className="col-4">
+                <button className="btn-sm btn-outline-secondary btn-block" onClick={this.handleSearchClick}>Search</button>
+                {/* <SearchButton onClick={this.handleSearchClick}></SearchButton> */}
+              </div >
+            </div >
+
+            <div className="row">
+              <div className="col-12 text-center">
+                <br></br>
+                <div className="pic-container">
+                  {this.state.restaurants.map(restaurant => <Restaurants titleStyle={{ backgroundColor: '#E80C7A', color: '#ffffff' }} onClick={this.itemDetailsClick} restaurantInfo={restaurant} />)}
+                </div>
+              </div>
+            </div>
+          </div >
+        </div>
+        <br></br>
+        <br></br>
         <FoodItemModal
           foodInfo={this.state.foodInfo}
           show={this.state.modalShow}
           onHide={this.modalClose}
         />
-      </div>
+      </div >
     );
   }
 }

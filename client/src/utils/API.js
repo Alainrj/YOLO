@@ -42,12 +42,11 @@ export default {
 
 
     getRestaurantsByBrandId: (brandIds, querySearch) => {
-
-
         const config = {
             headers: Object.assign({}, credentials),
             url: "https://trackapi.nutritionix.com/v2/search/instant",
             method: 'GET',
+            query: querySearch,
             contentType: 'application/json',
             params: {
                 query: querySearch,
@@ -77,58 +76,24 @@ export default {
         return axios(config)
     },
 
-    getFoodByQuery: async (query) => {
-        // We have to add this url before to avoid the CROS policy issues
-        const preUrl = 'https://cors-anywhere.herokuapp.com/'
+    getFoodByQuery: (query) => {
 
         const config = {
             headers: Object.assign({}, credentials),
             url: `https://trackapi.nutritionix.com/v2/search/instant`,
-            // nix_item_id: itemId,
             line_delimited: false,
-            query: "burger",
+            query: query,
+            method: 'GET',
+            contentType: 'application/json',
             params: {
                 query: query,
                 branded: true,
                 self: true,
                 common: true,
-                // brand_ids: brandIds,
                 branded_region: 1,
             },
-            // query: query,
-            // timezone: "America/New_York",
-            // use_branded_foods: false,
-            // use_raw_foods: false,
-            method: 'GET',
-            contentType: 'application/json',
         }
 
-        axios(config).then(result => {
-
-
-            for (let i = 0; i < 5; i++) {
-                const element = result.data.branded[i]
-            
-                console.log(element);
-                const itemId = element.nix_item_id;
-
-                const config = {
-                    headers: Object.assign({}, credentials),
-                    url: `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${itemId}`,
-                    // nix_item_id: itemId,
-                    upc: 0,
-                    claims: true,
-                    method: 'GET',
-                    contentType: 'application/json',
-                }
-
-                // return axios(config).then()
-                axios(config).then(res => {
-                    console.log(res.data.foods[0].food_name)
-                    console.log(res.data.foods[0].nf_calories)
-                })
-
-            };
-        })
+        return axios(config)
     }
 }
