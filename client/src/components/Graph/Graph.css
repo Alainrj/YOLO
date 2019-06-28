@@ -1,6 +1,7 @@
 #dailyGraph {
     height: 200px;
-    margin: 20px;
+    margin: 20px;    
+    
 }
 
 #graphTitle {
@@ -26,5 +27,8 @@
 
 #graphContainer {
     /* border-top: 2px solid #3E4032; */
-    height: 580px;
+    height: 43rem;
+    margin-bottom: 3rem;
+    background-color: #F0F7C2;
+    border-radius: 10px;
 }

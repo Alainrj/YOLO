@@ -15,7 +15,7 @@ class Client extends Component {
         <Container>
             <DailyCaloriesCal></DailyCaloriesCal>
             <Calender></Calender>
-            <Graph></Graph>
+            <Graph></Graph>            
         </Container>
       </div>
         

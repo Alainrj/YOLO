@@ -64,3 +64,10 @@
   width: 30px;
   height: 30px;
 }
+
+.ByCaloriesContainer{
+  background-color: #FEF8D9;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}

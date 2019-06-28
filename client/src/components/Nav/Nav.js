@@ -9,10 +9,8 @@ window.browserDetect = browser;
 
 function Nav() {
     return (
-        <>
         <div>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light " style={{backgroundColor: 'rgba(198, 216, 171, .6)'}}>
                 <a class="navbar-brand" href="/">
                     <div class="logo-image">
                         <img src="./img/Yolo.png" class="img-fluid" />
@@ -49,20 +47,7 @@ function Nav() {
             </nav>
             <LoginModal />
             <RegisterModal />
-        </div>
-{/* <div>
-
-                        <div className="modal-footer">
-                            <button type="submit" className="btn btn-sucess">Create an Account</button>
-                        </div>
-                        {
-                            (browser.os === 'iOS' || browser.os === 'Android OS')
-                                ? <div>Mobile Camera</div>
-                                : <div>Desktop Camera</div>
-                        }
-                    </div> */}
-       
-        </>
+        </div>       
     );
 }
 
