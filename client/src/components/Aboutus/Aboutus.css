@@ -1,14 +1,24 @@
 #aboutContainer {
-    border: 1px solid gray;
     margin: 20px;
+}
+#aboutContainerBody {
+    background-image: url("https://images.unsplash.com/photo-1506808547685-e2ba962ded60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    opacity: 0.7;
 }
 #aboutTitle {
-    border: 1px solid gray;
     margin: 20px;
     height: 80px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    /* background-color: rgba(69, 73, 57, .7); */
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 50px;
 }
-
-p {
-    border: 1px solid gray;
+#aboutPassage {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    background-color: rgba(133, 196, 137, .7);
     padding: 20px;
+    border-radius: 10px;
 }

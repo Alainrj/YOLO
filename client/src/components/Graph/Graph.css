@@ -4,12 +4,27 @@
 }
 
 #graphTitle {
+    font-size: 50px;
     margin: 20px;
-    text-align: center;
+    text-align: left;
+    color: #3E4032;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 30px;
 
 }
 
+#graphSubtitle {
+    font-size: 23px;
+    text-align: left;
+    color: #3E4032;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 155px;
+    bottom: 25px;
+}
+
 #graphContainer {
-    border: 1px solid gray;
-    height: 550px;
+    /* border-top: 2px solid #3E4032; */
+    height: 580px;
 }
