@@ -22,6 +22,11 @@
   width:100%;
 }
 
+.divBorders{
+  padding: 20px;
+  border: 1px solid gray;
+}
+
 .cardTitle{
   background-color: #E80C7A;
   color:#ffffff;
