@@ -81,8 +81,6 @@ class DailyCaloriesCal extends React.Component {
                 )
                 console.log('stateB', this.state)
             })
-
-
     }
 
     render() {
@@ -134,6 +132,20 @@ class DailyCaloriesCal extends React.Component {
                                     <button id="clientBtn" type="button" className="btn btn-info" onClick={this.scrapeSearch} >Search</button>
                                     <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
                                 </div>
+
+                                <input type="text" aria-label="Pounds" className="form-control" name="weight" value={this.state.weight} placeholder="pounds" onChange={this.handleInputChange} />
+                            </div>
+                            <div className="mx-auto" id="clientBtnDiv">
+                                <button id="clientBtn" type="button" className="btn btn-info text-center" onClick={this.scrapeSearch} >Search</button>
+                                <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
+
+                            </div>
+                            <br></br>
+                            <br></br>
+                            <div>
+                                <p className="text-center">Look around by location the food based on how many calories do you want to eat
+                                    <button type="button" className="btn-info btn-block text-center" onClick={() => window.location = "/bycaloriessearch"} >let's Go </button>
+                                </p>
                             </div>
                         </div>
                     </div>

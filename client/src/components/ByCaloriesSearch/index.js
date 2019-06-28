@@ -229,7 +229,7 @@ class ByCaloriesSearch extends Component {
       <div>
         <br></br>
         <br></br>
-        <div className="row" id="dailyCalculatorContents">
+        <div className="row" id="divBorders">
           {/* <div className="row" id="clientPageTitle"> */}
           <div className='col-12'>
             <div className="input-group mb-3">
@@ -243,13 +243,13 @@ class ByCaloriesSearch extends Component {
         </div>
         <br></br>
         <div className="row">
-          <div className='col-6' id="dailyCalculatorContents">
+          <div className='col-6' id="divBorders">
             <div style={{ height: '450px', width: '500px' }}>
               {this.state.myPlace.map(place => <Map lat={place.lat} lng={place.lng} name={place.name} zoom={place.zoom}></Map>)}
             </div>
           </div>
 
-          <div className='col-6' id="dailyCalculatorContents">
+          <div className='col-6' id="divBorders">
             <div className="row">
               <div className="col-12">
                 <MultiSelect className="multiSelect" onChange={this.onChangeSelect}></MultiSelect>

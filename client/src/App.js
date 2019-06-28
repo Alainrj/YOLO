@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/mypage" component={Client} />
           <Route exact path="/mypage/:id" component={Client} />
-          <Route exact path="/mainsearch" component={Search} />
+          <Route exact path="/bycaloriessearch" component={Search} />
         </Switch>
         <Footer />
       </div>

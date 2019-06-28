@@ -32,9 +32,9 @@ function Nav() {
                         <li class="nav-item">
                             <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
                         </li>
-                        <li class="nav-item">
+                        {/* <li class="nav-item">
                           <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
-                        </li>
+                        </li> */}
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
