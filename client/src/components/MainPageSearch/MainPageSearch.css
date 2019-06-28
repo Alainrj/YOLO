@@ -36,3 +36,13 @@ body{
 div#mainPageOutline.col-md-4{
     padding: 3px;
 }
+
+.ulSearchByFood{
+    padding: 1rem 1rem 0 0;
+}
+
+.listSearchByFood{
+    list-style: none;
+    border-bottom: .01rem solid #AAAAAA;
+    padding: 1rem 1rem 0.5rem 0;
+}

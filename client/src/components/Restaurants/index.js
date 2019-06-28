@@ -9,7 +9,7 @@ export default (props) => {
         <div>
             <Card>
                 <br></br>
-                <Card.Title>{props.restaurantInfo.restaurant.restaurantName}</Card.Title>
+                <Card.Title><h5 style={{ backgroundColor: '#E80C7A', color: '#ffffff', padding: '.5rem' }}>{props.restaurantInfo.restaurant.restaurantName}</h5></Card.Title>
                 {props.restaurantInfo.restaurant.dishs.map(item =>
 
                     <Card.Title>
