@@ -5,7 +5,32 @@ body{
     width:100%;
 }
 #banner {
-    margin: 20px;
+    background-image: url("https://images.unsplash.com/photo-1543353071-873f17a7a088?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0.7;
+    height: 350px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+div#appTitleContainer {
+    position: relative;
+    top: 100px;
+}
+h2#appTitle {
+    position: relative;
+    left: 120px;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 3px 2px 0 #7A7A7A;
+}
+
+h5#appSubtitle {
+    position: relative;
+    left: 300px;
+    top: 30px;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 3px 2px 0 #7A7A7A;
 }
 #mainPageArea1 {
     border-radius: 20px;
@@ -25,17 +50,27 @@ body{
     background-color: #EEF7BC;
 }
 #mainPageTitle {
-    text-align: center;
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 20px;
 }
 
 #mainPageSubtitle {
-    text-align: left;
+    text-align: right;
     font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    right: 20px;
+    bottom: 5px;
 }
 
 div#mainPageOutline.col-md-4{
     padding: 3px;
 }
+
 
 .ulSearchByFood{
     padding: 1rem 1rem 0 0;

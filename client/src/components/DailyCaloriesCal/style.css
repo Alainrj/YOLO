@@ -4,17 +4,59 @@
 
 #dailyCalculatorContents {
     padding: 20px;
-    border: 1px solid gray;
+}
+#dailyCalculatorContents1 {
+    background-color: #FFF7D6;
+    padding: 20px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+#dailyCalculatorContents2 {
+    background-color: #EEF7BC;
+    padding: 20px;
+    height: 450px;
+    border-radius: 10px;
 }
 
 #clientPageTitle{
     height: 80px;
-    border: 1px solid gray;
     text-align: center;
 }
 
 #clientBtn {
+    width: 80px;
     margin: 20px 5px 5px 5px;
     text-align: center;
     padding: 5px;
+}
+
+#dailyMainTitle{
+    height: 200px;
+    background-color: #A9BB91;
+    padding-top: 15px;
+}
+
+#dailyInputContainer {
+    padding: 12px 20px 30px 20px;
+    border-top: 2px solid #7A7A7A;
+
+}
+
+#dailyContentTitle {
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    left: 30px;
+}
+
+#dailyContentSubtitle {
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #7A7A7A;
+    position: relative;
+    right: 60px;
+    bottom: 5px;
 }
