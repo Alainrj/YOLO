@@ -6,7 +6,7 @@ import Select from 'react-select';
 
 const colourStyles = {
     
-  control: styles => ({ ...styles, backgroundColor: 'white' }),
+  control: styles => ({ ...styles, backgroundColor: 'white' , minWidth: '300px'}),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma(data.color);
     return {
@@ -56,12 +56,10 @@ const colourStyles = {
 
 export default (props) => (
   <Select
-    closeMenuOnSelect={false}
-    // defaultValue={[foods[0], foods[1]]}
+    closeMenuOnSelect={true}
     defaultValue={[]}
     isMulti
     onChange={props.onChange}
-    // sort the array alphabetically 
     options={foods.sort((a, b) => a.value.localeCompare(b.value))}
     styles={colourStyles}
   />
