@@ -28,22 +28,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
-app.use(cors({
-  origin: 'http://localhost',
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
-
-app.options('*', cors())
-
-
-app.all('', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost");
-  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  //Auth Each API Request created by user.
-  next();
-});
-
 
 if(!isProduction) {
   app.use(errorHandler());

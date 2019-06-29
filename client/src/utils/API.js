@@ -7,8 +7,8 @@ import ajax from 'ajax'
 const credentials = {
 
     // Alan
-    'x-app-id': 'a49cbcf2',
-    'x-app-key': '8fbb4486f5134e84e81d6f3918835982'
+    // 'x-app-id': 'a49cbcf2',
+    // 'x-app-key': '8fbb4486f5134e84e81d6f3918835982'
 
     // Camilo
     // 'x-app-id': '7af0b356',
@@ -16,8 +16,8 @@ const credentials = {
     // 'x-app-key': '6dd125bab9d995bde5f71cc6399ddbd8'
 
     // Rob
-    // 'x-app-id': 'e0a12c3e',
-    // 'x-app-key': 'ecea00b679c66c1d11b141d4833d152d',
+    'x-app-id': 'e0a12c3e',
+    'x-app-key': 'ecea00b679c66c1d11b141d4833d152d',
 }
 
 export default {

@@ -11,11 +11,11 @@ class Client extends Component {
   render() {
     return (
       <div>
-        {/* <LoginNav /> */}
+        <LoginNav />
         <Container>
             <DailyCaloriesCal></DailyCaloriesCal>
             <Calender></Calender>
-            <Graph></Graph>
+            <Graph></Graph>            
         </Container>
       </div>
         

@@ -1,55 +1,51 @@
 import React from "react";
+
+import LoginModal from "../Nav/components/LoginModal"
+import RegisterModal from "../Nav/components/RegisterModal"
+import { detect } from 'detect-browser';
 import "./LoginNav.css";
+const browser = detect();
+window.browserDetect = browser;
 
 function LoginNav() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="/">YOLO (LOGO)</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/mypage">My Page </a>
-              </li>
-            </ul>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                  <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#myPhoto">My Photo</button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className="modal fade" role="dialog" id="myPhoto">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h3 className="modal-title">Sign In</h3>
-                <button type="button" className="close" data-dismiss="modal">&times;</button>
-              </div>
-
-              <div className="modal-body">
-                <div class="form-group">
-                    <input type="text" name="username" className="form-control" placeholder="Username" />
+        <div>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light " style={{backgroundColor: 'rgba(198, 216, 171, .6)'}}>
+                <a class="navbar-brand" href="/">
+                    <div class="logo-image">
+                        <img src="./img/Yolo.png" class="img-fluid" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        {/* <li class="nav-item">
+                            <a class="nav-link" href="/about" >About</a>
+                        </li> */}
+                        {/* <li class="nav-item">
+                            <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
+                        </li> */}
+                        {/* <li class="nav-item">
+                          <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
+                        </li> */}
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button type="button" className="btn btn-sucess" onClick={() => window.location = '/'}><i class="fas fa-sign-out-alt"></i> Log Out</button>
+                        </li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <input type="passsword" name="password" className="form-control" placeholder="Password" />
-                </div>
-              </div>
 
-              <div className="modal-footer">
-                  <button type="submit" className="btn btn-sucess">Sign In</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </nav>
+            <LoginModal />
+            <RegisterModal />
+        </div>       
     );
-  }
+}
 
 export default LoginNav;

@@ -9,10 +9,8 @@ window.browserDetect = browser;
 
 function Nav() {
     return (
-        <>
         <div>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light " style={{backgroundColor: 'rgba(198, 216, 171, .6)'}}>
                 <a class="navbar-brand" href="/">
                     <div class="logo-image">
                         <img src="./img/Yolo.png" class="img-fluid" />
@@ -29,9 +27,9 @@ function Nav() {
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
-                        <li class="nav-item">
+                        {/* <li class="nav-item">
                             <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
-                        </li>
+                        </li> */}
                         {/* <li class="nav-item">
                           <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
                         </li> */}
@@ -41,7 +39,7 @@ function Nav() {
                             <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Log In</button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal"><i class="fas fa-user-plus"></i> Register</button>
+                            <button id="registerButtonControl" type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal"><i class="fas fa-user-plus"></i> Register</button>
                         </li>
                     </ul>
                 </div>
@@ -49,20 +47,7 @@ function Nav() {
             </nav>
             <LoginModal />
             <RegisterModal />
-        </div>
-{/* <div>
-
-                        <div className="modal-footer">
-                            <button type="submit" className="btn btn-sucess">Create an Account</button>
-                        </div>
-                        {
-                            (browser.os === 'iOS' || browser.os === 'Android OS')
-                                ? <div>Mobile Camera</div>
-                                : <div>Desktop Camera</div>
-                        }
-                    </div> */}
-       
-        </>
+        </div>       
     );
 }
 

@@ -3,17 +3,21 @@
 }
 #aboutContainerBody {
     background-image: url("https://images.unsplash.com/photo-1506808547685-e2ba962ded60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-repeat: none;
+    background-size: cover;
     opacity: 0.7;
+    min-height: 40rem;
 }
 #aboutTitle {
-    margin: 20px;
+    margin: 3rem 3rem 5rem 3rem;
     height: 80px;
     color: #FFFFFF;
     text-shadow: 2px 2px 1px #7A7A7A;
     /* background-color: rgba(69, 73, 57, .7); */
     padding-left: 30px;
     padding-top: 15px;
-    font-size: 50px;
+    font-size: 5rem;
+    text-align: center;
 }
 #aboutPassage {
     color: #FFFFFF;
@@ -21,4 +25,5 @@
     background-color: rgba(133, 196, 137, .7);
     padding: 20px;
     border-radius: 10px;
+    font-size: 1.7rem;
 }

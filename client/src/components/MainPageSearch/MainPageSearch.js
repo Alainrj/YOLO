@@ -40,12 +40,11 @@ class MainPageSearch extends React.Component {
         e.preventDefault();
         console.log('restaurantObject', this.state)
         if (this.state.query != "") {
-
             API.getFoodByQuery(this.state.query).then(result => {
                 if (result.data.branded.length > 0) {
                     const list = []
 
-                    for (let i = 0; i < 2; i++) {
+                    for (let i = 0; i < 7; i++) {
                         const element = result.data.branded[i]
 
                         // console.log(element);
@@ -188,7 +187,12 @@ class MainPageSearch extends React.Component {
                             <div className="col-md-12" id="mainPageArea1">
                                 <h2 id="mainPageTitle">How </h2>
                                 <h5 id="mainPageSubtitle">to use this app</h5>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto consequuntur eligendi quia et placeat explicabo beatae illo dolorem, maiores veniam perferendis hic. Dolores esse voluptatem culpa amet, ut repellat laudantium.</p>
+                                <p>Users can lose weight by:</p>
+                                <li className="listAboutDescription">Registering and taking your 1st photo.</li>
+                                <li className="listAboutDescription">Set Calorie Targets for weight loss. Use Calorie Calculator.</li>
+                                <li className="listAboutDescription">Log in Items ate via food or restaurant search.</li>
+                                <li className="listAboutDescription"> Monitor daily or weekly progress</li>
+                                <li className="listAboutDescription">Upload picture to stay motivated!</li>
                             </div>
                         </div>
                         <div className="col-md-4" id="mainPageOutline">
@@ -198,8 +202,8 @@ class MainPageSearch extends React.Component {
                                 <div className="input-group mb-3">
                                     <input type="text" onChange={this.handleOnChangeFood} className="form-control" placeholder="" aria-label="Food Calories Search" aria-describedby="basic-addon2" />
                                     <div className="input-group-append">
-                                        {/* <button className="btn btn-outline-secondary" onClick={this.handleSearchByFoodClick} type="button">Search</button> */}
-                                        <button className="btn btn-outline-secondary" onClick={this.handleSearchByFoodClickFake} type="button">Search</button>
+                                        <button className="btn btn-outline-secondary" onClick={this.handleSearchByFoodClick} type="button">Search</button>
+                                        {/* <button className="btn btn-outline-secondary" onClick={this.handleSearchByFoodClickFake} type="button">Search</button> */}
                                     </div>
                                 </div>
                                 <div className="text-left">

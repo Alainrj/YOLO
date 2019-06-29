@@ -1,6 +1,8 @@
 #dailyCalender {
+    background-color: #FEF8D9;
     margin: 20px 0;
     padding: 20px;
+    border-radius: 10px;
 }
 
 /* #calenderContainer {
