@@ -27,9 +27,9 @@ function Nav() {
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
-                        <li class="nav-item">
+                        {/* <li class="nav-item">
                             <a id="nav-link" class="nav-link" href="/mypage">My Page </a>
-                        </li>
+                        </li> */}
                         {/* <li class="nav-item">
                           <a id="nav-link" class="nav-link" href="/mainsearch">Main search</a>
                         </li> */}
@@ -39,7 +39,7 @@ function Nav() {
                             <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Log In</button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal"><i class="fas fa-user-plus"></i> Register</button>
+                            <button id="registerButtonControl" type="button" className="btn btn-sucess" data-toggle="modal" data-target="#registerModal"><i class="fas fa-user-plus"></i> Register</button>
                         </li>
                     </ul>
                 </div>

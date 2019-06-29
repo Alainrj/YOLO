@@ -24,6 +24,13 @@ h2#appTitle {
     text-shadow: 3px 2px 0 #7A7A7A;
 }
 
+.listAboutDescription{
+    list-style-type:decimal;
+    margin-bottom: .1rem;
+    text-align: left;
+    color: #3E4033;
+}
+
 h5#appSubtitle {
     position: relative;
     left: 300px;

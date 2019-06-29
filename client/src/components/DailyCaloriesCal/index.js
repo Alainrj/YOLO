@@ -24,6 +24,13 @@ class DailyCaloriesCal extends React.Component {
         }
     }
 
+    componentDidMount() {
+        // console.log('userBefore',user)
+        // axios.get("/current").then(user => {
+        axios.get("/test-route").then(user => {
+            console.log('user', user)
+        })
+    }
 
     handleInputChange = event => {
         console.log(event)
@@ -107,10 +114,10 @@ class DailyCaloriesCal extends React.Component {
                                     </div>
                                     <input type="text" className="form-control" aria-label="ageInput" aria-describedby="ageInput" name="age" value={this.state.age} placeholder="age" onChange={this.handleInputChange} />
                                     <div className="input-group-prepend">
-                                        <label className="input-group-text" for="gender">Gender</label>
+                                        <label className="input-group-text" htmlFor="gender">Gender</label>
                                     </div>
                                     <select className="custom-select" id="gender" onChange={this.handleDropDownChange}  >
-                                        <option selected >Choose...</option>
+                                        <option defaultValue >Choose...</option>
                                         <option value="m"  >Male</option>
                                         <option value="f"  >Female</option>
                                     </select>
@@ -128,14 +135,15 @@ class DailyCaloriesCal extends React.Component {
                                     </div>
                                     <input type="text" aria-label="Pounds" className="form-control" name="weight" value={this.state.weight} placeholder="lbs" onChange={this.handleInputChange} />
                                 </div>
-                                <div className="mx-auto" id="clientBtnDiv">
+                                <div className="mx-auto text-center">
                                     <button id="clientBtn" type="button" className="btn btn-info" onClick={this.scrapeSearch} >Search</button>
                                     <button id="clientBtn" type="button" className="btn btn-primary">Save</button>
                                 </div>
-
-                            </div>                            
+                            </div>
                             <div>
-                                <p className="text-center">Look around by location the food based on how many calories do you want to eat
+                                <p className="text-center">Input info to search by location to find the restaurant menu items you can eat!
+                                <br></br><br></br>
+                                    
                                     <button type="button" className="btn-info btn-block text-center" onClick={() => window.location = "/bycaloriessearch"} >let's Go </button>
                                 </p>
                             </div>

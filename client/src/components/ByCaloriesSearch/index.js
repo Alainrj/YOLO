@@ -227,14 +227,23 @@ class ByCaloriesSearch extends Component {
   render() {
     return (
       <div className='container'>
+
+        <div id="dailyMainTitle">
+          <h2 id="myPageTitle">
+            Restaurant Search
+                    </h2>
+          <h5 id="myPageSubTitle">
+            Where would you like to eat?
+                    </h5>
+        </div>
+        <br></br>
         <div className="ByCaloriesContainer">
           <div className="row" id="divBorders">
-            {/* <div className="row" id="clientPageTitle"> */}
             <div className='col-12'>
               <div className="input-group mb-3">
                 <input id="txtSearch" type="text" className="form-control" placeholder="Search by zip code, City or address" onChange={this.locationChange} required />
                 <div className="input-group-append">
-                  <button className="btn-ouline-light btn-sm btnLocation mainSearchButton" type="submit" onClick={this.locationClick}><img className="imgArrow" srcSet='././img/locationarrow.png' alt=""></img></button>
+                  <button className="btn-outsline-light btn-sm btnLocation mainSearchButton" type="submit" onClick={this.locationClick}><img className="imgArrow" srcSet='././img/locationarrow.png' alt=""></img></button>
                   <SearchButton onClick={this.locationSearchClick}></SearchButton>
                 </div>
               </div>

@@ -7,11 +7,14 @@ function Aboutus() {
             <div className="row" id="aboutContainer">
                 <div className="col-md-12">
                     <h2 id="aboutTitle">About us</h2>
-                    <p id="aboutPassage">The app will be a calories manager, based on how many calories the user wants to get we will suggest the food that contains the calories desired or less using the NUTRIONIX API (or any other) from a least 10 closest restaurants based on google maps API. The user should register into the app and add information on the profile as described below, the user has the option to add pictures to follow the lost weight progress, we will keep a record of all pictures from day 1 to last, based on the user profile the app will suggest a daily calories amount, for that we’ll scrape information from https://www.calculator.net/calorie-calculator.html, to store the info we can use mongoDB and firebase to upload the pictures.</p>
+
+                    <p id="aboutPassage"><p>The team is comprised of six members. Consisting of Dowan Kim, Sara Romeo, Robert Perea-Martinez, Anthony Mastanduno, Camilo Agudelo and Alain Joseph.</p>
+
+                        <p>The concept started with two other ideas one of which consisted of an AI Apartment app and the other an app for a new type of restaurant.  Incorporating the two ideas we created an app that aids in weight loss by helping you monitor your calorie intake based on the closest restaurant and calories left to consume while motivating you with timelapsed photos of your physical changes.</p></p>
                 </div>
             </div>
         </div>
     );
-  }
+}
 
 export default Aboutus;

@@ -16,7 +16,8 @@ class LoginModal extends React.Component {
     }
 
     loginUser = () => {
-        console.log("BUILD LOGIN API HERE")
+        document.querySelector("#registerButtonControl").getAttribute("display", 'none')
+        window.location = "/mypage"
     }
 
 
