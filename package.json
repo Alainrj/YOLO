@@ -37,7 +37,7 @@
     "express-jwt": "^5.3.1",
     "express-session": "^1.16.2",
     "google-map-react": "^1.1.4",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.1",
