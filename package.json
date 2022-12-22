@@ -39,7 +39,7 @@
     "google-map-react": "^1.1.4",
     "i": "^0.3.6",
     "if-env": "^1.0.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.6.1",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
